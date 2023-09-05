@@ -61,6 +61,7 @@
       <div>简介：{{ nowAct.brief }}</div>
       <div>详情：{{ nowAct.content }}</div>
       <div>推文：{{ nowAct.link }}</div>
+      <div>报名链接：{{ nowAct.regLink }}</div>
       <div>时间：{{ nowAct.startText }}~{{ nowAct.endText }}</div>
       <div>人数：{{ nowAct.number }}</div>
       <div>上次审核意见：{{ nowAct.rejectReason }}</div>
@@ -91,6 +92,8 @@
       <n-input maxlength="140" type="textarea" v-model:value="nowAct.content" show-count :autosize="{minRows: 3}"></n-input>
       <n-h4 style="margin: 5px 0px;">推文链接</n-h4>
       <n-input v-model:value="nowAct.link" clearable></n-input>
+      <n-h4 style="margin: 5px 0px;">报名链接（无链接留空）</n-h4>
+      <n-input v-model:value="nowAct.regLink" clearable></n-input>
       <n-h4 style="margin: 5px 0px;">起止时间</n-h4>
       <n-date-picker v-model:value="nowAct.range" type="datetimerange" clearable/>
       <n-h4 style="margin: 5px 0px;">人数</n-h4>
@@ -134,6 +137,8 @@
       <n-input maxlength="140" type="textarea" v-model:value="nowAct.content" show-count :autosize="{minRows: 3}"></n-input>
       <n-h4 style="margin: 5px 0px;">推文链接</n-h4>
       <n-input v-model:value="nowAct.link" clearable></n-input>
+      <n-h4 style="margin: 5px 0px;">报名链接（无链接留空）</n-h4>
+      <n-input v-model:value="nowAct.regLink" clearable></n-input>
       <n-h4 style="margin: 5px 0px;">起止时间</n-h4>
       <n-date-picker v-model:value="nowAct.range" type="datetimerange" clearable/>
       <n-h4 style="margin: 5px 0px;">人数</n-h4>
@@ -514,6 +519,7 @@ function addActivity(){
     endTime: 0,
     id: "",
     link: "",
+    regLink: "",
     number: null,
     oid: "0",
     orgName: orgName,

@@ -38,6 +38,9 @@
         <div>
           请联系浙江大学求是潮邮箱
         </div>
+        <div>
+          tech@zjuqsc.com
+        </div>
       </n-gradient-text>
     </n-card>
     <div class = "rights-text">
